@@ -1,2 +1,2 @@
 # AVator
-Another antivirus evasion project 
+An antivirus evasion project 
