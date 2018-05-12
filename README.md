@@ -1,4 +1,4 @@
-
+﻿
 ## DO NOT UPLOAD TO VIRUS TOTAL -----------------------------------------
 
 # AVator
@@ -16,8 +16,6 @@ The shellcode should be provided as a byte array in the C# format. The default v
 After filling the provided inputs and select the output path an executable is generated according to the chosen options. 
 
 Compile the code provide or use the allready compiled binaries under the bin directory of the project.
-
-## DO NOT UPLOAD TO VIRUS TOTAL -----------------------------------------
 
 
 
