@@ -57,10 +57,15 @@
             this.virtualAllocEx_Option = new System.Windows.Forms.RadioButton();
             this.virtualAlloc_Option = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // keyBox
@@ -146,7 +151,7 @@
             // 
             // genExe
             // 
-            this.genExe.Location = new System.Drawing.Point(0, 621);
+            this.genExe.Location = new System.Drawing.Point(675, 734);
             this.genExe.Name = "genExe";
             this.genExe.Size = new System.Drawing.Size(119, 23);
             this.genExe.TabIndex = 9;
@@ -178,16 +183,15 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.genExe);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(12, 15);
+            this.groupBox1.Location = new System.Drawing.Point(-4, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(244, 675);
+            this.groupBox1.Size = new System.Drawing.Size(330, 709);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Steps to follow";
@@ -341,6 +345,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox4.Controls.Add(this.groupBox3);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.groupBox2);
@@ -353,20 +358,52 @@
             this.groupBox4.Controls.Add(this.keyBox);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.ivBox);
-            this.groupBox4.Location = new System.Drawing.Point(258, 15);
+            this.groupBox4.Location = new System.Drawing.Point(315, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(435, 675);
+            this.groupBox4.Size = new System.Drawing.Size(459, 694);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Preferences";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(782, 716);
+            this.tabControl1.TabIndex = 19;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(774, 690);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Shellcode Injection";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(774, 690);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Persistency (TODO)";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 689);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox4);
+            this.ClientSize = new System.Drawing.Size(818, 763);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.genExe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -381,6 +418,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -415,6 +454,9 @@
         private System.Windows.Forms.RadioButton virtualAllocEx_Option;
         private System.Windows.Forms.TextBox procBox;
         private System.Windows.Forms.TextBox tipBox;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
