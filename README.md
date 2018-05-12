@@ -11,7 +11,7 @@ The application has a form which consists of three main inputs:
 1.	A text containing the encryption key used to encrypt the shellcode 
 2.	A text containing the IV used for AES encryption 
 3.	A text containing the shellcode 
-The shellcode should be provided as a byte array in the C# format. The default values executes calc.exe (32bit) and provide an indication of how the code should be formed. For the msfvenom users this can be easily done with the -f csharp switch. 
+The shellcode should be provided as a byte array in the C# format. The default values contain shellcode that executes calc.exe (32bit). This example is provided as an indication of how the code should be formed. For the msfvenom users this can be easily done with the -f csharp switch. 
 
 After filling the provided inputs and select the output path an executable is generated according to the chosen options. 
 
