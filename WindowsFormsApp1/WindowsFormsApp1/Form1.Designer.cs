@@ -60,6 +60,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.threadHijacking_option = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -299,6 +300,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.threadHijacking_option);
             this.groupBox3.Controls.Add(this.procBox);
             this.groupBox3.Controls.Add(this.virtualAllocEx_Option);
             this.groupBox3.Controls.Add(this.virtualAlloc_Option);
@@ -312,7 +314,7 @@
             // procBox
             // 
             this.procBox.Enabled = false;
-            this.procBox.Location = new System.Drawing.Point(289, 43);
+            this.procBox.Location = new System.Drawing.Point(289, 38);
             this.procBox.Name = "procBox";
             this.procBox.Size = new System.Drawing.Size(100, 20);
             this.procBox.TabIndex = 2;
@@ -322,7 +324,7 @@
             // virtualAllocEx_Option
             // 
             this.virtualAllocEx_Option.AutoSize = true;
-            this.virtualAllocEx_Option.Location = new System.Drawing.Point(67, 44);
+            this.virtualAllocEx_Option.Location = new System.Drawing.Point(67, 41);
             this.virtualAllocEx_Option.Name = "virtualAllocEx_Option";
             this.virtualAllocEx_Option.Size = new System.Drawing.Size(160, 17);
             this.virtualAllocEx_Option.TabIndex = 1;
@@ -397,6 +399,18 @@
             this.tabPage2.Text = "Persistency (TODO)";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // threadHijacking_option
+            // 
+            this.threadHijacking_option.AutoSize = true;
+            this.threadHijacking_option.Location = new System.Drawing.Point(67, 64);
+            this.threadHijacking_option.Name = "threadHijacking_option";
+            this.threadHijacking_option.Size = new System.Drawing.Size(132, 17);
+            this.threadHijacking_option.TabIndex = 3;
+            this.threadHijacking_option.TabStop = true;
+            this.threadHijacking_option.Text = "Thread Hijacking (x64)";
+            this.threadHijacking_option.UseVisualStyleBackColor = true;
+            this.threadHijacking_option.CheckedChanged += new System.EventHandler(this.threadHijacking_option_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,6 +471,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.RadioButton threadHijacking_option;
     }
 }
 

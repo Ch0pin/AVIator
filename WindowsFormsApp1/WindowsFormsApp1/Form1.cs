@@ -55,8 +55,8 @@ namespace WindowsFormsApp1
         {
             String architecture = null;
             Compiler compiler = new Compiler();
-     
 
+            ThreadHijacking thrHijacking = null;
             VirtualAllocTech virtualAllocT = null;
             VirtualAllocExTech virtualAllocExT = null;
 
@@ -77,13 +77,21 @@ namespace WindowsFormsApp1
                     virtualAllocExT = new VirtualAllocExTech(keyBox.Text, resultBox.Text.Replace("\r\n", ""),procBox.Text);
                     compiler.compileToExe(virtualAllocExT.GetCode(), keyBox.Text, filepath, architecture);
                 }
+                else if (threadHijacking_option.Checked)
+                {
+                    
+                    thrHijacking = new ThreadHijacking(keyBox.Text, resultBox.Text.Replace("\r\n", ""));
+                    compiler.compileToExe(thrHijacking.GetCode(), keyBox.Text, filepath, " /platform:x64 /optimize");
+                }
+                MessageBox.Show("The operation completed successfully", "AV/\tor");
+
             }
-            catch(Exception er)
+
+            catch (Exception er)
             {
                 MessageBox.Show(er.Message);
             }
 
-            MessageBox.Show( "The operation completed successfully", "AV/\tor");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -116,6 +124,9 @@ namespace WindowsFormsApp1
 
         }
 
-       
+        private void threadHijacking_option_CheckedChanged(object sender, EventArgs e)
+        {
+            archX64.Checked = true;
+        }
     }
 }
