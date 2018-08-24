@@ -1,7 +1,7 @@
 ﻿
 ## DO NOT UPLOAD TO VIRUS TOTAL -----------------------------------------
 
-# AVator
+# AV|ator
 
 AVator is a backdoor generator, which use cryptographic and injection techniques in order to bypass AV detection. More specifically, it uses the AES encryption scheme in order to encrypt a given shellcode and creates an executable which contains it. At this state detection is almost impossible since there is no way for the AV to identify any kind of signature. After the execution the shellcode is decrypted in to memory (so it never “touches” the hard disk) and finally executed using various injection techniques. So far, I implemented two of these techniques, but “thread hijacking” is almost ready, and others (e.g. AtomBombing ) are following.  
 
