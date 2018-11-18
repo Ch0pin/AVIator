@@ -1,5 +1,5 @@
 ﻿
-## DO NOT UPLOAD TO VIRUS TOTAL -----------------------------------------
+## DO NOT UPLOAD TO VIRUS TOTAL --------------------------------
 
 # AV|ator
 
