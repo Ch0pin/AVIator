@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
                 else
                     if (virtualAllocEx_Option.Checked)
                 {
-                    
+                    procBox.Text = "notepad.exe(32)";
                     virtualAllocExT = new VirtualAllocExTech(keyBox.Text, resultBox.Text.Replace("\r\n", ""),procBox.Text);
                     compiler.compileToExe(virtualAllocExT.GetCode(), keyBox.Text, filepath, architecture);
                 }
@@ -119,8 +119,9 @@ namespace WindowsFormsApp1
         private void virtualAllocEx_Option_CheckedChanged(object sender, EventArgs e)
         {
             if (virtualAllocEx_Option.Checked)
-                procBox.Enabled = true;
-            else procBox.Enabled = false;
+                procBox.Text = "notepad.exe(32)";
+            else if (virtualAlloc_Option.Checked)
+                procBox.Text = "none";
 
         }
 

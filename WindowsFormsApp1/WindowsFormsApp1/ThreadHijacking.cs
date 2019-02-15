@@ -367,7 +367,7 @@ namespace WindowsFormsApp1
                                             ConstantsAndExtCalls.CloseHandle(hThrHandle);
 
                                             ConstantsAndExtCalls.CloseHandle(handle_1);
-                                            p.Close();
+                                           // p.Close();
 
 
                                             }

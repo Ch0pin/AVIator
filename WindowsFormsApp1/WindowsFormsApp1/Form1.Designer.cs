@@ -47,12 +47,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tipBox = new System.Windows.Forms.TextBox();
             this.archX64 = new System.Windows.Forms.RadioButton();
             this.archX86 = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.threadHijacking_option = new System.Windows.Forms.RadioButton();
             this.procBox = new System.Windows.Forms.TextBox();
             this.virtualAllocEx_Option = new System.Windows.Forms.RadioButton();
             this.virtualAlloc_Option = new System.Windows.Forms.RadioButton();
@@ -60,7 +60,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.threadHijacking_option = new System.Windows.Forms.RadioButton();
+            this.tipBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -244,19 +244,7 @@
             this.groupBox2.Size = new System.Drawing.Size(422, 86);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Architecture";
-            // 
-            // tipBox
-            // 
-            this.tipBox.BackColor = System.Drawing.SystemColors.Info;
-            this.tipBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tipBox.Enabled = false;
-            this.tipBox.Location = new System.Drawing.Point(188, 62);
-            this.tipBox.Multiline = true;
-            this.tipBox.Name = "tipBox";
-            this.tipBox.Size = new System.Drawing.Size(228, 18);
-            this.tipBox.TabIndex = 2;
-            this.tipBox.Text = "Sellection must match Shellcode\'s architecture.";
+            this.groupBox2.Text = "Target OS Architecture";
             // 
             // archX64
             // 
@@ -306,30 +294,43 @@
             this.groupBox3.Controls.Add(this.virtualAlloc_Option);
             this.groupBox3.Location = new System.Drawing.Point(4, 522);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(422, 87);
+            this.groupBox3.Size = new System.Drawing.Size(422, 149);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Injection Technique";
             // 
+            // threadHijacking_option
+            // 
+            this.threadHijacking_option.AutoSize = true;
+            this.threadHijacking_option.Location = new System.Drawing.Point(13, 104);
+            this.threadHijacking_option.Name = "threadHijacking_option";
+            this.threadHijacking_option.Size = new System.Drawing.Size(132, 17);
+            this.threadHijacking_option.TabIndex = 3;
+            this.threadHijacking_option.TabStop = true;
+            this.threadHijacking_option.Text = "Thread Hijacking (x64)";
+            this.threadHijacking_option.UseVisualStyleBackColor = true;
+            this.threadHijacking_option.CheckedChanged += new System.EventHandler(this.threadHijacking_option_CheckedChanged);
+            // 
             // procBox
             // 
             this.procBox.Enabled = false;
-            this.procBox.Location = new System.Drawing.Point(289, 38);
+            this.procBox.Location = new System.Drawing.Point(293, 101);
             this.procBox.Name = "procBox";
             this.procBox.Size = new System.Drawing.Size(100, 20);
             this.procBox.TabIndex = 2;
-            this.procBox.Text = "explorer";
+            this.procBox.Text = "none";
             this.procBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // virtualAllocEx_Option
             // 
             this.virtualAllocEx_Option.AutoSize = true;
-            this.virtualAllocEx_Option.Location = new System.Drawing.Point(67, 41);
+            this.virtualAllocEx_Option.Location = new System.Drawing.Point(13, 55);
             this.virtualAllocEx_Option.Name = "virtualAllocEx_Option";
-            this.virtualAllocEx_Option.Size = new System.Drawing.Size(160, 17);
+            this.virtualAllocEx_Option.Size = new System.Drawing.Size(391, 43);
             this.virtualAllocEx_Option.TabIndex = 1;
             this.virtualAllocEx_Option.TabStop = true;
-            this.virtualAllocEx_Option.Text = "Inject shellcode to proccess:";
+            this.virtualAllocEx_Option.Text = "Runs notepad (32) as a background process and injects the  given shellcode \r\nusin" +
+    "g the CreateRemoteThread API function. \r\n(Shellcode Arch: x86, OS Arch: x86)";
             this.virtualAllocEx_Option.UseVisualStyleBackColor = true;
             this.virtualAllocEx_Option.CheckedChanged += new System.EventHandler(this.virtualAllocEx_Option_CheckedChanged);
             // 
@@ -337,12 +338,13 @@
             // 
             this.virtualAlloc_Option.AutoSize = true;
             this.virtualAlloc_Option.Checked = true;
-            this.virtualAlloc_Option.Location = new System.Drawing.Point(67, 19);
+            this.virtualAlloc_Option.Location = new System.Drawing.Point(13, 19);
             this.virtualAlloc_Option.Name = "virtualAlloc_Option";
-            this.virtualAlloc_Option.Size = new System.Drawing.Size(162, 17);
+            this.virtualAlloc_Option.Size = new System.Drawing.Size(346, 30);
             this.virtualAlloc_Option.TabIndex = 0;
             this.virtualAlloc_Option.TabStop = true;
-            this.virtualAlloc_Option.Text = "Create new thread in memory";
+            this.virtualAlloc_Option.Text = "Create new thread in memory using the CreateThread API Function. \r\n(Shellcode Arc" +
+    "h: x86, x64, OS Ach: x86, x64)\r\n";
             this.virtualAlloc_Option.UseVisualStyleBackColor = true;
             // 
             // groupBox4
@@ -399,17 +401,17 @@
             this.tabPage2.Text = "Persistency (TODO)";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // threadHijacking_option
+            // tipBox
             // 
-            this.threadHijacking_option.AutoSize = true;
-            this.threadHijacking_option.Location = new System.Drawing.Point(67, 64);
-            this.threadHijacking_option.Name = "threadHijacking_option";
-            this.threadHijacking_option.Size = new System.Drawing.Size(132, 17);
-            this.threadHijacking_option.TabIndex = 3;
-            this.threadHijacking_option.TabStop = true;
-            this.threadHijacking_option.Text = "Thread Hijacking (x64)";
-            this.threadHijacking_option.UseVisualStyleBackColor = true;
-            this.threadHijacking_option.CheckedChanged += new System.EventHandler(this.threadHijacking_option_CheckedChanged);
+            this.tipBox.BackColor = System.Drawing.SystemColors.Info;
+            this.tipBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tipBox.Enabled = false;
+            this.tipBox.Location = new System.Drawing.Point(176, 18);
+            this.tipBox.Multiline = true;
+            this.tipBox.Name = "tipBox";
+            this.tipBox.Size = new System.Drawing.Size(228, 18);
+            this.tipBox.TabIndex = 2;
+            this.tipBox.Text = "Sellection must match Shellcode\'s architecture.";
             // 
             // Form1
             // 
@@ -467,11 +469,11 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton virtualAllocEx_Option;
         private System.Windows.Forms.TextBox procBox;
-        private System.Windows.Forms.TextBox tipBox;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RadioButton threadHijacking_option;
+        private System.Windows.Forms.TextBox tipBox;
     }
 }
 

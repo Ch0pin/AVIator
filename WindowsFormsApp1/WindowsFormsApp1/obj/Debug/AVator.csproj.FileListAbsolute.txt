@@ -18,3 +18,13 @@ C:\Users\takis\Desktop\AVator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\AVator
 C:\Users\takis\Desktop\AVator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\AVator.csproj.CoreCompileInputs.cache
 C:\Users\takis\Desktop\AVator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\takis\Desktop\AVator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\AVator.csprojAssemblyReference.cache
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\AVator.csproj.GenerateResource.cache
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\AVator.csproj.CoreCompileInputs.cache
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

