@@ -17,7 +17,10 @@ After filling the provided inputs and select the output path an executable is ge
 
 Compile the code provide or use the allready compiled binaries under the bin directory of the project.
 
+**Installation**
 
+Either compile the project or download the allready compiled executable from the following folder:
+https://github.com/Ch0pin/AVIator/tree/master/WindowsFormsApp1/WindowsFormsApp1/bin/Release
 
 #### Credits
 To Damon Mohammadbagher for the encryption procedure
