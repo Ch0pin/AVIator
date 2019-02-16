@@ -61,6 +61,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tipBox = new System.Windows.Forms.TextBox();
+            this.injectExistingApp = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -88,10 +89,10 @@
             // 
             // payloadBox
             // 
-            this.payloadBox.Location = new System.Drawing.Point(4, 109);
+            this.payloadBox.Location = new System.Drawing.Point(4, 112);
             this.payloadBox.Multiline = true;
             this.payloadBox.Name = "payloadBox";
-            this.payloadBox.Size = new System.Drawing.Size(422, 113);
+            this.payloadBox.Size = new System.Drawing.Size(404, 72);
             this.payloadBox.TabIndex = 2;
             this.payloadBox.Text = resources.GetString("payloadBox.Text");
             // 
@@ -125,7 +126,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(328, 242);
+            this.label4.Location = new System.Drawing.Point(312, 195);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 13);
             this.label4.TabIndex = 6;
@@ -133,16 +134,16 @@
             // 
             // resultBox
             // 
-            this.resultBox.Location = new System.Drawing.Point(4, 266);
+            this.resultBox.Location = new System.Drawing.Point(4, 219);
             this.resultBox.Multiline = true;
             this.resultBox.Name = "resultBox";
             this.resultBox.ReadOnly = true;
-            this.resultBox.Size = new System.Drawing.Size(422, 97);
+            this.resultBox.Size = new System.Drawing.Size(420, 67);
             this.resultBox.TabIndex = 7;
             // 
             // encryptPayload
             // 
-            this.encryptPayload.Location = new System.Drawing.Point(4, 237);
+            this.encryptPayload.Location = new System.Drawing.Point(4, 190);
             this.encryptPayload.Name = "encryptPayload";
             this.encryptPayload.Size = new System.Drawing.Size(119, 23);
             this.encryptPayload.TabIndex = 8;
@@ -173,7 +174,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 242);
+            this.label6.Location = new System.Drawing.Point(11, 219);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 13);
             this.label6.TabIndex = 11;
@@ -200,7 +201,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(11, 430);
+            this.label9.Location = new System.Drawing.Point(11, 366);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 13);
             this.label9.TabIndex = 13;
@@ -209,7 +210,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 388);
+            this.label7.Location = new System.Drawing.Point(10, 313);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 13);
             this.label7.TabIndex = 12;
@@ -217,7 +218,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(4, 383);
+            this.button1.Location = new System.Drawing.Point(4, 303);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 23);
             this.button1.TabIndex = 13;
@@ -228,7 +229,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(136, 393);
+            this.label8.Location = new System.Drawing.Point(199, 303);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 14;
@@ -239,7 +240,7 @@
             this.groupBox2.Controls.Add(this.tipBox);
             this.groupBox2.Controls.Add(this.archX64);
             this.groupBox2.Controls.Add(this.archX86);
-            this.groupBox2.Location = new System.Drawing.Point(4, 430);
+            this.groupBox2.Location = new System.Drawing.Point(4, 351);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(422, 86);
             this.groupBox2.TabIndex = 13;
@@ -288,13 +289,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.injectExistingApp);
             this.groupBox3.Controls.Add(this.threadHijacking_option);
             this.groupBox3.Controls.Add(this.procBox);
             this.groupBox3.Controls.Add(this.virtualAllocEx_Option);
             this.groupBox3.Controls.Add(this.virtualAlloc_Option);
-            this.groupBox3.Location = new System.Drawing.Point(4, 522);
+            this.groupBox3.Location = new System.Drawing.Point(4, 443);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(422, 149);
+            this.groupBox3.Size = new System.Drawing.Size(422, 244);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Injection Technique";
@@ -302,7 +304,7 @@
             // threadHijacking_option
             // 
             this.threadHijacking_option.AutoSize = true;
-            this.threadHijacking_option.Location = new System.Drawing.Point(13, 104);
+            this.threadHijacking_option.Location = new System.Drawing.Point(13, 184);
             this.threadHijacking_option.Name = "threadHijacking_option";
             this.threadHijacking_option.Size = new System.Drawing.Size(132, 17);
             this.threadHijacking_option.TabIndex = 3;
@@ -314,7 +316,7 @@
             // procBox
             // 
             this.procBox.Enabled = false;
-            this.procBox.Location = new System.Drawing.Point(293, 101);
+            this.procBox.Location = new System.Drawing.Point(304, 184);
             this.procBox.Name = "procBox";
             this.procBox.Size = new System.Drawing.Size(100, 20);
             this.procBox.TabIndex = 2;
@@ -326,11 +328,11 @@
             this.virtualAllocEx_Option.AutoSize = true;
             this.virtualAllocEx_Option.Location = new System.Drawing.Point(13, 55);
             this.virtualAllocEx_Option.Name = "virtualAllocEx_Option";
-            this.virtualAllocEx_Option.Size = new System.Drawing.Size(391, 43);
+            this.virtualAllocEx_Option.Size = new System.Drawing.Size(404, 43);
             this.virtualAllocEx_Option.TabIndex = 1;
             this.virtualAllocEx_Option.TabStop = true;
-            this.virtualAllocEx_Option.Text = "Runs notepad (32) as a background process and injects the  given shellcode \r\nusin" +
-    "g the CreateRemoteThread API function. \r\n(Shellcode Arch: x86, OS Arch: x86)";
+            this.virtualAllocEx_Option.Text = "Spawns notepad (32) as a background process and injects the  given shellcode \r\nus" +
+    "ing the CreateRemoteThread API function. \r\n(Shellcode Arch: x86, OS Arch: x86)";
             this.virtualAllocEx_Option.UseVisualStyleBackColor = true;
             this.virtualAllocEx_Option.CheckedChanged += new System.EventHandler(this.virtualAllocEx_Option_CheckedChanged);
             // 
@@ -413,6 +415,20 @@
             this.tipBox.TabIndex = 2;
             this.tipBox.Text = "Sellection must match Shellcode\'s architecture.";
             // 
+            // injectExistingApp
+            // 
+            this.injectExistingApp.AutoSize = true;
+            this.injectExistingApp.Location = new System.Drawing.Point(13, 104);
+            this.injectExistingApp.Name = "injectExistingApp";
+            this.injectExistingApp.Size = new System.Drawing.Size(398, 43);
+            this.injectExistingApp.TabIndex = 4;
+            this.injectExistingApp.TabStop = true;
+            this.injectExistingApp.Text = "Injects the  given shellcode to an existing application which is given by the use" +
+    "r\r\nin the text box bellow. \r\n(Shellcode Architecture should be the same with the" +
+    " selected OS Architecture)";
+            this.injectExistingApp.UseVisualStyleBackColor = true;
+            this.injectExistingApp.CheckedChanged += new System.EventHandler(this.injectExistingApp_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,6 +490,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RadioButton threadHijacking_option;
         private System.Windows.Forms.TextBox tipBox;
+        private System.Windows.Forms.RadioButton injectExistingApp;
     }
 }
 

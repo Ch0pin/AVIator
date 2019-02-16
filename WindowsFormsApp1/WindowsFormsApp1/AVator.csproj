@@ -92,6 +92,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThreadHijacking.cs" />
+    <Compile Include="VirtualAllocEx_existing_APP_Tech.cs" />
     <Compile Include="VirtualAllocExTech.cs" />
     <Compile Include="VirtualAllocTech.cs" />
     <EmbeddedResource Include="Form1.resx">

