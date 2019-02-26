@@ -52,6 +52,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.injectExistingApp = new System.Windows.Forms.RadioButton();
             this.threadHijacking_option = new System.Windows.Forms.RadioButton();
             this.procBox = new System.Windows.Forms.TextBox();
             this.virtualAllocEx_Option = new System.Windows.Forms.RadioButton();
@@ -60,8 +61,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tipBox = new System.Windows.Forms.TextBox();
-            this.injectExistingApp = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -92,7 +91,7 @@
             this.payloadBox.Location = new System.Drawing.Point(4, 112);
             this.payloadBox.Multiline = true;
             this.payloadBox.Name = "payloadBox";
-            this.payloadBox.Size = new System.Drawing.Size(404, 72);
+            this.payloadBox.Size = new System.Drawing.Size(420, 72);
             this.payloadBox.TabIndex = 2;
             this.payloadBox.Text = resources.GetString("payloadBox.Text");
             // 
@@ -237,7 +236,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.tipBox);
             this.groupBox2.Controls.Add(this.archX64);
             this.groupBox2.Controls.Add(this.archX86);
             this.groupBox2.Location = new System.Drawing.Point(4, 351);
@@ -301,22 +299,36 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Injection Technique";
             // 
+            // injectExistingApp
+            // 
+            this.injectExistingApp.AutoSize = true;
+            this.injectExistingApp.Location = new System.Drawing.Point(13, 104);
+            this.injectExistingApp.Name = "injectExistingApp";
+            this.injectExistingApp.Size = new System.Drawing.Size(398, 43);
+            this.injectExistingApp.TabIndex = 4;
+            this.injectExistingApp.TabStop = true;
+            this.injectExistingApp.Text = "Injects the  given shellcode to an existing application which is given by the use" +
+    "r\r\nin the text box bellow. \r\n(Shellcode Architecture should be the same with the" +
+    " selected OS Architecture)";
+            this.injectExistingApp.UseVisualStyleBackColor = true;
+            this.injectExistingApp.CheckedChanged += new System.EventHandler(this.injectExistingApp_CheckedChanged);
+            // 
             // threadHijacking_option
             // 
             this.threadHijacking_option.AutoSize = true;
-            this.threadHijacking_option.Location = new System.Drawing.Point(13, 184);
+            this.threadHijacking_option.Location = new System.Drawing.Point(13, 162);
             this.threadHijacking_option.Name = "threadHijacking_option";
-            this.threadHijacking_option.Size = new System.Drawing.Size(132, 17);
+            this.threadHijacking_option.Size = new System.Drawing.Size(273, 17);
             this.threadHijacking_option.TabIndex = 3;
             this.threadHijacking_option.TabStop = true;
-            this.threadHijacking_option.Text = "Thread Hijacking (x64)";
+            this.threadHijacking_option.Text = "Thread Hijacking (Shellode Arch: x64, OS Arch: x64)";
             this.threadHijacking_option.UseVisualStyleBackColor = true;
             this.threadHijacking_option.CheckedChanged += new System.EventHandler(this.threadHijacking_option_CheckedChanged);
             // 
             // procBox
             // 
             this.procBox.Enabled = false;
-            this.procBox.Location = new System.Drawing.Point(304, 184);
+            this.procBox.Location = new System.Drawing.Point(304, 162);
             this.procBox.Name = "procBox";
             this.procBox.Size = new System.Drawing.Size(100, 20);
             this.procBox.TabIndex = 2;
@@ -346,7 +358,7 @@
             this.virtualAlloc_Option.TabIndex = 0;
             this.virtualAlloc_Option.TabStop = true;
             this.virtualAlloc_Option.Text = "Create new thread in memory using the CreateThread API Function. \r\n(Shellcode Arc" +
-    "h: x86, x64, OS Ach: x86, x64)\r\n";
+    "h: x86, x64, OS Arch: x86, x64)\r\n";
             this.virtualAlloc_Option.UseVisualStyleBackColor = true;
             // 
             // groupBox4
@@ -402,32 +414,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Persistency (TODO)";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tipBox
-            // 
-            this.tipBox.BackColor = System.Drawing.SystemColors.Info;
-            this.tipBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tipBox.Enabled = false;
-            this.tipBox.Location = new System.Drawing.Point(176, 18);
-            this.tipBox.Multiline = true;
-            this.tipBox.Name = "tipBox";
-            this.tipBox.Size = new System.Drawing.Size(228, 18);
-            this.tipBox.TabIndex = 2;
-            this.tipBox.Text = "Sellection must match Shellcode\'s architecture.";
-            // 
-            // injectExistingApp
-            // 
-            this.injectExistingApp.AutoSize = true;
-            this.injectExistingApp.Location = new System.Drawing.Point(13, 104);
-            this.injectExistingApp.Name = "injectExistingApp";
-            this.injectExistingApp.Size = new System.Drawing.Size(398, 43);
-            this.injectExistingApp.TabIndex = 4;
-            this.injectExistingApp.TabStop = true;
-            this.injectExistingApp.Text = "Injects the  given shellcode to an existing application which is given by the use" +
-    "r\r\nin the text box bellow. \r\n(Shellcode Architecture should be the same with the" +
-    " selected OS Architecture)";
-            this.injectExistingApp.UseVisualStyleBackColor = true;
-            this.injectExistingApp.CheckedChanged += new System.EventHandler(this.injectExistingApp_CheckedChanged);
             // 
             // Form1
             // 
@@ -489,7 +475,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RadioButton threadHijacking_option;
-        private System.Windows.Forms.TextBox tipBox;
         private System.Windows.Forms.RadioButton injectExistingApp;
     }
 }

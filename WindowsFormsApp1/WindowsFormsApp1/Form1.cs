@@ -87,8 +87,9 @@ namespace WindowsFormsApp1
                 }
                 else if (threadHijacking_option.Checked)
                 {
-                    
-                    thrHijacking = new ThreadHijacking(keyBox.Text, resultBox.Text.Replace("\r\n", ""));
+                    procBox.Enabled = true;
+                    procBox.Text = "explorer";
+                    thrHijacking = new ThreadHijacking(keyBox.Text, resultBox.Text.Replace("\r\n", ""),procBox.Text);
                     compiler.compileToExe(thrHijacking.GetCode(), keyBox.Text, filepath, " /platform:x64 /optimize");
                 }
                 MessageBox.Show("The operation completed successfully", "AV/\tor");
@@ -136,6 +137,8 @@ namespace WindowsFormsApp1
         private void threadHijacking_option_CheckedChanged(object sender, EventArgs e)
         {
             archX64.Checked = true;
+            procBox.Text = "explorer";
+            procBox.Enabled = true;
         }
 
         private void injectExistingApp_CheckedChanged(object sender, EventArgs e)
