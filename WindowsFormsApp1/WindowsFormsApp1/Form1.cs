@@ -81,14 +81,13 @@ namespace WindowsFormsApp1
                 else if (injectExistingApp.Checked)
                 {
                     procBox.Enabled = true;
-                    procBox.Text = "explorer";
                     virtualAllocEx_existing = new VirtualAllocEx_existing_APP_Tech(keyBox.Text, resultBox.Text.Replace("\r\n", ""), procBox.Text);
                     compiler.compileToExe(virtualAllocEx_existing.GetCode(), keyBox.Text, filepath, architecture);
                 }
                 else if (threadHijacking_option.Checked)
                 {
                     procBox.Enabled = true;
-                    procBox.Text = "explorer";
+                    
                     thrHijacking = new ThreadHijacking(keyBox.Text, resultBox.Text.Replace("\r\n", ""),procBox.Text);
                     compiler.compileToExe(thrHijacking.GetCode(), keyBox.Text, filepath, " /platform:x64 /optimize");
                 }
