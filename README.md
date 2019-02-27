@@ -1,5 +1,3 @@
-﻿
-## DO NOT UPLOAD TO VIRUS TOTAL --------------------------------
 
 # AV|ator
 
@@ -20,14 +18,14 @@ Compile the code provide or use the allready compiled binaries under the bin dir
 
 **Installation**
 
-**Windows:
+**Windows:**
 
 Either compile the project or download the allready compiled executable from the following folder:
 https://github.com/Ch0pin/AVIator/tree/master/Compiled%20Binaries
 
-**Linux:
+**Linux:**
 
-Install mono framework, download and run the binaries
+Install mono, download and run the binaries
 
 
 #### Credits
@@ -38,6 +36,7 @@ To Damon Mohammadbagher for the encryption procedure
 I developed this app in order to overcome the demanding challenges of the pentest procedure and this is the only way that the app should be used. Make sure that you have the required permission to use it against a system and never use it for illegal purposes. 
 I would suggest to avoid testing the executables on solutions like virus total e.t.c. If you want to use the application for pentesting purposes I am sure you have already identified the AV used by your target, so go download a demo and make your testing offline. 
 
+And please remember:
 
-## DO NOT UPLOAD TO VIRUS TOTAL -----------------------------------------
+## DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL -----------
 
