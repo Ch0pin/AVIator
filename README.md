@@ -16,7 +16,7 @@ After filling the provided inputs and select the output path an executable is ge
 
 Compile the code provide or use the allready compiled binaries under the bin directory of the project.
 
-## ---------------------------------------------Installation---------------------------------------------
+## -------------------Installation------------------------
 
 **Windows:**
 
