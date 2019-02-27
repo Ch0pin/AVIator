@@ -25,7 +25,11 @@ https://github.com/Ch0pin/AVIator/tree/master/Compiled%20Binaries
 
 **Linux:**
 
-Install mono, download and run the binaries
+Install Mono according to your linux distribution, download and run the binaries
+
+e.g. in kali:
+root@kali# apt install mono-devel 
+root@kali# mono aviator.exe
 
 
 #### Credits
