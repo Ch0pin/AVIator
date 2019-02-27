@@ -20,8 +20,15 @@ Compile the code provide or use the allready compiled binaries under the bin dir
 
 **Installation**
 
+**Windows:
+
 Either compile the project or download the allready compiled executable from the following folder:
 https://github.com/Ch0pin/AVIator/tree/master/Compiled%20Binaries
+
+**Linux:
+
+Install mono framework, download and run the binaries
+
 
 #### Credits
 To Damon Mohammadbagher for the encryption procedure
