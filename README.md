@@ -16,7 +16,7 @@ After filling the provided inputs and select the output path an executable is ge
 
 Compile the code provide or use the allready compiled binaries under the bin directory of the project.
 
-**Installation**
+## ---------------------------------------------Installation---------------------------------------------
 
 **Windows:**
 
@@ -28,7 +28,9 @@ https://github.com/Ch0pin/AVIator/tree/master/Compiled%20Binaries
 Install Mono according to your linux distribution, download and run the binaries
 
 e.g. in kali:
+
 root@kali# apt install mono-devel 
+
 root@kali# mono aviator.exe
 
 
