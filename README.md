@@ -21,7 +21,7 @@ Compile the code provide or use the allready compiled binaries under the bin dir
 **Installation**
 
 Either compile the project or download the allready compiled executable from the following folder:
-https://github.com/Ch0pin/AVIator/tree/master/WindowsFormsApp1/WindowsFormsApp1/bin/Release
+https://github.com/Ch0pin/AVIator/tree/master/Compiled%20Binaries
 
 #### Credits
 To Damon Mohammadbagher for the encryption procedure
