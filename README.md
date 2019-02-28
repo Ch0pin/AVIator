@@ -26,7 +26,7 @@ The shellcode should be provided as a C# byte array. The default values contain 
 
 After filling the provided inputs and selecting the output path an executable is generated according to the chosen options. 
 
-## -------------------Installation------------------------
+#### Installation
 
 **Windows:**
 
@@ -55,5 +55,5 @@ I would suggest to avoid testing the executables on solutions like virus total e
 
 And please remember:
 
-## DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL -----------
+### DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL 
 
