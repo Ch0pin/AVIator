@@ -14,7 +14,7 @@ AVator is a backdoor generator utility, which uses cryptographic and injection t
 
 #### Usage
 
-The application has a form which consists of three main inputs:
+The application has a form which consists of three main inputs (See screenshot bellow):
 
 https://ibb.co/X24mnzW
 
