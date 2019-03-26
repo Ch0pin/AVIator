@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
         {
             String architecture = null;
             Compiler compiler = new Compiler();
-
+            ThreadHijackingX86 thrHijackingx86 = null;
             ThreadHijacking thrHijacking = null;
             VirtualAllocTech virtualAllocT = null;
             VirtualAllocExTech virtualAllocExT = null;
@@ -90,6 +90,14 @@ namespace WindowsFormsApp1
                     
                     thrHijacking = new ThreadHijacking(keyBox.Text, resultBox.Text.Replace("\r\n", ""),procBox.Text);
                     compiler.compileToExe(thrHijacking.GetCode(), keyBox.Text, filepath, " /platform:x64 /optimize");
+                }
+                else if(threadHijackin_x86.Checked)
+                {
+                    procBox.Text = "notepad.ex(32)";
+                    thrHijackingx86 = new ThreadHijackingX86(keyBox.Text, resultBox.Text.Replace("\r\n", ""), procBox.Text);
+                    compiler.compileToExe(thrHijackingx86.GetCode(), keyBox.Text, filepath, " /platform:x86 /optimize");
+
+
                 }
                 MessageBox.Show("The operation completed successfully", "AV/\tor");
 
@@ -144,6 +152,11 @@ namespace WindowsFormsApp1
         {
             procBox.Text = "explorer";
             procBox.Enabled = true;
+        }
+
+        private void threadHijackin_x86_CheckedChanged(object sender, EventArgs e)
+        {
+            procBox.Text = "notepad.exe(32);";
         }
     }
 }
