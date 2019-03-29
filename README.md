@@ -1,8 +1,8 @@
 
 # AV|ator
 
-AVator is a backdoor generator utility, which uses cryptographic and injection techniques in order to bypass AV detection. More specifically:
-- It use AES encryption in order to encrypt a given shellcode 
+AV|ator is a backdoor generator utility, which uses cryptographic and injection techniques in order to bypass AV detection. More specifically:
+- It uses AES encryption in order to encrypt a given shellcode 
 - Generates an executable file which contains the encrypted payload
 - The shellcode is decrypted and injected to the target system using various injection techniques 
 
