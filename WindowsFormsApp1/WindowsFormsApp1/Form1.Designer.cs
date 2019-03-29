@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace AvIator
 {
     partial class Form1
     {
@@ -43,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -63,13 +65,15 @@
             this.virtualAllocEx_Option = new System.Windows.Forms.RadioButton();
             this.virtualAlloc_Option = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.RTLOCheckBox = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.RTLOCheckBox = new System.Windows.Forms.CheckBox();
             this.RTLOtip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -151,7 +155,7 @@
             // 
             // encryptPayload
             // 
-            this.encryptPayload.Location = new System.Drawing.Point(808, 181);
+            this.encryptPayload.Location = new System.Drawing.Point(799, 179);
             this.encryptPayload.Name = "encryptPayload";
             this.encryptPayload.Size = new System.Drawing.Size(119, 23);
             this.encryptPayload.TabIndex = 8;
@@ -161,7 +165,7 @@
             // 
             // genExe
             // 
-            this.genExe.Location = new System.Drawing.Point(706, 215);
+            this.genExe.Location = new System.Drawing.Point(717, 215);
             this.genExe.Name = "genExe";
             this.genExe.Size = new System.Drawing.Size(119, 23);
             this.genExe.TabIndex = 9;
@@ -191,6 +195,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label9);
@@ -210,6 +216,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INSTRUCTIONS";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(27, 655);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(231, 17);
+            this.linkLabel1.TabIndex = 23;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Follow me on twitter:  @Ch0pin";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(94, 545);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(112, 98);
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // label15
             // 
@@ -420,6 +447,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.RTLOCheckBox);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.groupBox3);
@@ -440,6 +468,27 @@
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "PREFERENCES";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(799, 311);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 25);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Set Custom Icon";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // RTLOCheckBox
+            // 
+            this.RTLOCheckBox.AutoSize = true;
+            this.RTLOCheckBox.Location = new System.Drawing.Point(229, 317);
+            this.RTLOCheckBox.Name = "RTLOCheckBox";
+            this.RTLOCheckBox.Size = new System.Drawing.Size(187, 17);
+            this.RTLOCheckBox.TabIndex = 19;
+            this.RTLOCheckBox.Text = "Use Right to Left Override (RTLO)";
+            this.RTLOCheckBox.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -482,16 +531,6 @@
             this.tabPage2.Text = "Advanced (TODO)";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // RTLOCheckBox
-            // 
-            this.RTLOCheckBox.AutoSize = true;
-            this.RTLOCheckBox.Location = new System.Drawing.Point(229, 317);
-            this.RTLOCheckBox.Name = "RTLOCheckBox";
-            this.RTLOCheckBox.Size = new System.Drawing.Size(187, 17);
-            this.RTLOCheckBox.TabIndex = 19;
-            this.RTLOCheckBox.Text = "Use Right to Left Override (RTLO)";
-            this.RTLOCheckBox.UseVisualStyleBackColor = true;
-            // 
             // RTLOtip
             // 
             this.RTLOtip.BackColor = System.Drawing.SystemColors.Window;
@@ -505,6 +544,7 @@
             this.ClientSize = new System.Drawing.Size(1308, 763);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -512,6 +552,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -565,6 +606,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox RTLOCheckBox;
         private System.Windows.Forms.ToolTip RTLOtip;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

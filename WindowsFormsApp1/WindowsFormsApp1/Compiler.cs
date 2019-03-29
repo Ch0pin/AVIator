@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Text;
 
 
-namespace WindowsFormsApp1
+namespace AvIator
 {
     class Compiler
     {
@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             parameters.OutputAssembly = filePath;
             parameters.CompilerOptions = "/target:exe" + Arch;
-
+            
             CompilerResults results = provider.CompileAssemblyFromSource(parameters, code);
 
             if (results.Errors.HasErrors)

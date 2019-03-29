@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace WindowsFormsApp1
+namespace AvIator
 {
     class VirtualAllocExTech
     {

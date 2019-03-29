@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Text;
 
 
-namespace WindowsFormsApp1
+namespace AvIator
 {
     class CompileAllTheThings
     {
