@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.keyBox = new System.Windows.Forms.TextBox();
             this.ivBox = new System.Windows.Forms.TextBox();
@@ -42,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,20 +55,20 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.threadHijackin_x86 = new System.Windows.Forms.RadioButton();
             this.injectExistingApp = new System.Windows.Forms.RadioButton();
             this.threadHijacking_option = new System.Windows.Forms.RadioButton();
             this.procBox = new System.Windows.Forms.TextBox();
             this.virtualAllocEx_Option = new System.Windows.Forms.RadioButton();
             this.virtualAlloc_Option = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.threadHijackin_x86 = new System.Windows.Forms.RadioButton();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.RTLOCheckBox = new System.Windows.Forms.CheckBox();
+            this.RTLOtip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -206,6 +209,25 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INSTRUCTIONS";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(11, 351);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(196, 13);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "8. Press the Generate Exe button";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(11, 323);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(170, 13);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "7. Select injection technique";
             // 
             // label9
             // 
@@ -238,7 +260,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(235, 323);
+            this.label8.Location = new System.Drawing.Point(454, 321);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 14;
@@ -312,6 +334,27 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Injection Technique";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(472, 224);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 13);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Target Procedure:";
+            // 
+            // threadHijackin_x86
+            // 
+            this.threadHijackin_x86.AutoSize = true;
+            this.threadHijackin_x86.Location = new System.Drawing.Point(13, 168);
+            this.threadHijackin_x86.Name = "threadHijackin_x86";
+            this.threadHijackin_x86.Size = new System.Drawing.Size(273, 17);
+            this.threadHijackin_x86.TabIndex = 5;
+            this.threadHijackin_x86.TabStop = true;
+            this.threadHijackin_x86.Text = "Thread Hijacking (Shellode Arch: x86, OS Arch: x86)";
+            this.threadHijackin_x86.UseVisualStyleBackColor = true;
+            this.threadHijackin_x86.CheckedChanged += new System.EventHandler(this.threadHijackin_x86_CheckedChanged);
+            // 
             // injectExistingApp
             // 
             this.injectExistingApp.AutoSize = true;
@@ -377,6 +420,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox4.Controls.Add(this.RTLOCheckBox);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.groupBox3);
             this.groupBox4.Controls.Add(this.label11);
@@ -396,6 +440,15 @@
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "PREFERENCES";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(31, 112);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(45, 13);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Payload";
             // 
             // tabControl1
             // 
@@ -424,58 +477,26 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(774, 690);
+            this.tabPage2.Size = new System.Drawing.Size(1245, 690);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Persistency (TODO)";
+            this.tabPage2.Text = "Advanced (TODO)";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // threadHijackin_x86
+            // RTLOCheckBox
             // 
-            this.threadHijackin_x86.AutoSize = true;
-            this.threadHijackin_x86.Location = new System.Drawing.Point(13, 168);
-            this.threadHijackin_x86.Name = "threadHijackin_x86";
-            this.threadHijackin_x86.Size = new System.Drawing.Size(273, 17);
-            this.threadHijackin_x86.TabIndex = 5;
-            this.threadHijackin_x86.TabStop = true;
-            this.threadHijackin_x86.Text = "Thread Hijacking (Shellode Arch: x86, OS Arch: x86)";
-            this.threadHijackin_x86.UseVisualStyleBackColor = true;
-            this.threadHijackin_x86.CheckedChanged += new System.EventHandler(this.threadHijackin_x86_CheckedChanged);
+            this.RTLOCheckBox.AutoSize = true;
+            this.RTLOCheckBox.Location = new System.Drawing.Point(229, 317);
+            this.RTLOCheckBox.Name = "RTLOCheckBox";
+            this.RTLOCheckBox.Size = new System.Drawing.Size(187, 17);
+            this.RTLOCheckBox.TabIndex = 19;
+            this.RTLOCheckBox.Text = "Use Right to Left Override (RTLO)";
+            this.RTLOCheckBox.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // RTLOtip
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(472, 224);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 13);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Target Procedure:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(31, 112);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 13);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Payload";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(11, 323);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(170, 13);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "7. Select injection technique";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(11, 351);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(196, 13);
-            this.label15.TabIndex = 21;
-            this.label15.Text = "8. Press the Generate Exe button";
+            this.RTLOtip.BackColor = System.Drawing.SystemColors.Window;
+            this.RTLOtip.IsBalloon = true;
+            this.RTLOtip.ToolTipTitle = "About RTLO";
             // 
             // Form1
             // 
@@ -542,6 +563,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox RTLOCheckBox;
+        private System.Windows.Forms.ToolTip RTLOtip;
     }
 }
 

