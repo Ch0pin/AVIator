@@ -12,7 +12,7 @@ AV|ator is a backdoor generator utility, which uses cryptographic and injection 
 
 2. Thread execution hijacking which involves injecting malicious code or the path to a DLL into a thread of a process. Similar to Process Hollowing, the thread must first be suspended.
 
-#### Usage
+### Usage
 
 The application has a form which consists of three main inputs (See screenshot bellow):
 
@@ -27,11 +27,11 @@ The shellcode should be provided as a C# byte array. The default values contain 
 After filling the provided inputs and selecting the output path an executable is generated according to the chosen options. 
 
 
-#### Bypassig Kaspersky AV on a Win 10 x64 host (TEST CASE) 
+### Bypassig Kaspersky AV on a Win 10 x64 host (TEST CASE) 
 
 Getting a shell in a windows 10 machine running fully updated kaspersky AV 
 
-####Target Machine: windows 10 x64 
+#### Target Machine: windows 10 x64 
 
 1. Create the payload using msfvenom 
 
@@ -52,7 +52,7 @@ Target procedure: explorer (leave the default)
 
 
 
-#### Installation
+### Installation
 
 **Windows:**
 
@@ -71,10 +71,10 @@ root@kali# apt install mono-devel
 root@kali# mono aviator.exe
 
 
-#### Credits
+### Credits
 To Damon Mohammadbagher for the encryption procedure
 
-#### Disclaimer 
+### Disclaimer 
 
 I developed this app in order to overcome the demanding challenges of the pentest procedure and this is the only way that the app should be used. Make sure that you have the required permission to use it against a system and never use it for illegal purposes. 
 I would suggest to avoid testing the executables on solutions like virus total e.t.c. If you want to use the application for pentesting purposes I am sure you have already identified the AV used by your target, so go download a demo and make your testing offline. 
