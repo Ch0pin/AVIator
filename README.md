@@ -27,7 +27,7 @@ The shellcode should be provided as a C# byte array. The default values contain 
 After filling the provided inputs and selecting the output path an executable is generated according to the chosen options. 
 
 
-### Bypassig Kaspersky AV on a Win 10 x64 host (TEST CASE) 
+### Bypassing Kaspersky AV on a Win 10 x64 host (TEST CASE) 
 
 Getting a shell in a windows 10 machine running fully updated kaspersky AV 
 
