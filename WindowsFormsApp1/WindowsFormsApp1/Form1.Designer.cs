@@ -57,6 +57,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.APCInjectionCheckBox = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.threadHijackin_x86 = new System.Windows.Forms.RadioButton();
             this.injectExistingApp = new System.Windows.Forms.RadioButton();
@@ -165,7 +166,7 @@
             // 
             // genExe
             // 
-            this.genExe.Location = new System.Drawing.Point(717, 215);
+            this.genExe.Location = new System.Drawing.Point(717, 252);
             this.genExe.Name = "genExe";
             this.genExe.Size = new System.Drawing.Size(119, 23);
             this.genExe.TabIndex = 9;
@@ -211,7 +212,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(-4, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(307, 690);
+            this.groupBox1.Size = new System.Drawing.Size(307, 735);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INSTRUCTIONS";
@@ -299,7 +300,7 @@
             this.groupBox2.Controls.Add(this.archX86);
             this.groupBox2.Location = new System.Drawing.Point(82, 351);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(842, 58);
+            this.groupBox2.Size = new System.Drawing.Size(842, 47);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Target OS Architecture";
@@ -307,7 +308,7 @@
             // archX64
             // 
             this.archX64.AutoSize = true;
-            this.archX64.Location = new System.Drawing.Point(129, 19);
+            this.archX64.Location = new System.Drawing.Point(77, 19);
             this.archX64.Name = "archX64";
             this.archX64.Size = new System.Drawing.Size(42, 17);
             this.archX64.TabIndex = 1;
@@ -318,7 +319,7 @@
             // 
             this.archX86.AutoSize = true;
             this.archX86.Checked = true;
-            this.archX86.Location = new System.Drawing.Point(67, 19);
+            this.archX86.Location = new System.Drawing.Point(13, 19);
             this.archX86.Name = "archX86";
             this.archX86.Size = new System.Drawing.Size(42, 17);
             this.archX86.TabIndex = 0;
@@ -346,6 +347,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.APCInjectionCheckBox);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.threadHijackin_x86);
             this.groupBox3.Controls.Add(this.genExe);
@@ -354,17 +356,30 @@
             this.groupBox3.Controls.Add(this.procBox);
             this.groupBox3.Controls.Add(this.virtualAllocEx_Option);
             this.groupBox3.Controls.Add(this.virtualAlloc_Option);
-            this.groupBox3.Location = new System.Drawing.Point(82, 424);
+            this.groupBox3.Location = new System.Drawing.Point(82, 404);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(842, 248);
+            this.groupBox3.Size = new System.Drawing.Size(842, 316);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Injection Technique";
+            this.groupBox3.Text = "Injection Techniques";
+            // 
+            // APCInjectionCheckBox
+            // 
+            this.APCInjectionCheckBox.AutoSize = true;
+            this.APCInjectionCheckBox.Location = new System.Drawing.Point(13, 262);
+            this.APCInjectionCheckBox.Name = "APCInjectionCheckBox";
+            this.APCInjectionCheckBox.Size = new System.Drawing.Size(440, 30);
+            this.APCInjectionCheckBox.TabIndex = 11;
+            this.APCInjectionCheckBox.TabStop = true;
+            this.APCInjectionCheckBox.Text = "Queue User APC to Alertable Thread (Shellcode Arch: x64, OS ARch: x64)\r\n+++High s" +
+    "uccess rate and stable execution, depending on the target procedure given :))\r\n";
+            this.APCInjectionCheckBox.UseVisualStyleBackColor = true;
+            this.APCInjectionCheckBox.CheckedChanged += new System.EventHandler(this.APCInjectionCheckBox_CheckedChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(472, 224);
+            this.label12.Location = new System.Drawing.Point(579, 236);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 13);
             this.label12.TabIndex = 10;
@@ -373,45 +388,45 @@
             // threadHijackin_x86
             // 
             this.threadHijackin_x86.AutoSize = true;
-            this.threadHijackin_x86.Location = new System.Drawing.Point(13, 168);
+            this.threadHijackin_x86.Location = new System.Drawing.Point(13, 208);
             this.threadHijackin_x86.Name = "threadHijackin_x86";
-            this.threadHijackin_x86.Size = new System.Drawing.Size(273, 17);
+            this.threadHijackin_x86.Size = new System.Drawing.Size(448, 30);
             this.threadHijackin_x86.TabIndex = 5;
             this.threadHijackin_x86.TabStop = true;
-            this.threadHijackin_x86.Text = "Thread Hijacking (Shellode Arch: x86, OS Arch: x86)";
+            this.threadHijackin_x86.Text = "Thread Hijacking (Shellcode Arch: x86, OS Arch: x86)\r\n+++ High success Rate and s" +
+    "table execution, depending on the target procedure given :))";
             this.threadHijackin_x86.UseVisualStyleBackColor = true;
             this.threadHijackin_x86.CheckedChanged += new System.EventHandler(this.threadHijackin_x86_CheckedChanged);
             // 
             // injectExistingApp
             // 
             this.injectExistingApp.AutoSize = true;
-            this.injectExistingApp.Location = new System.Drawing.Point(13, 87);
+            this.injectExistingApp.Location = new System.Drawing.Point(13, 102);
             this.injectExistingApp.Name = "injectExistingApp";
-            this.injectExistingApp.Size = new System.Drawing.Size(711, 30);
+            this.injectExistingApp.Size = new System.Drawing.Size(711, 43);
             this.injectExistingApp.TabIndex = 4;
             this.injectExistingApp.TabStop = true;
-            this.injectExistingApp.Text = "Injects the  given shellcode to an existing application which is given by the use" +
-    "r in the text box bellow (Shellcode Architecture should be the same \r\nwith the s" +
-    "elected OS Architecture)";
+            this.injectExistingApp.Text = resources.GetString("injectExistingApp.Text");
             this.injectExistingApp.UseVisualStyleBackColor = true;
             this.injectExistingApp.CheckedChanged += new System.EventHandler(this.injectExistingApp_CheckedChanged);
             // 
             // threadHijacking_option
             // 
             this.threadHijacking_option.AutoSize = true;
-            this.threadHijacking_option.Location = new System.Drawing.Point(13, 134);
+            this.threadHijacking_option.Location = new System.Drawing.Point(13, 163);
             this.threadHijacking_option.Name = "threadHijacking_option";
-            this.threadHijacking_option.Size = new System.Drawing.Size(273, 17);
+            this.threadHijacking_option.Size = new System.Drawing.Size(523, 30);
             this.threadHijacking_option.TabIndex = 3;
             this.threadHijacking_option.TabStop = true;
-            this.threadHijacking_option.Text = "Thread Hijacking (Shellode Arch: x64, OS Arch: x64)";
+            this.threadHijacking_option.Text = "Thread Hijacking targeting the procedure given in the text box bellow (Shellcode " +
+    "Arch: x64, OS Arch: x64)\r\n++++ High Success Rate and stable execution :)))";
             this.threadHijacking_option.UseVisualStyleBackColor = true;
             this.threadHijacking_option.CheckedChanged += new System.EventHandler(this.threadHijacking_option_CheckedChanged);
             // 
             // procBox
             // 
             this.procBox.Enabled = false;
-            this.procBox.Location = new System.Drawing.Point(571, 217);
+            this.procBox.Location = new System.Drawing.Point(582, 252);
             this.procBox.Name = "procBox";
             this.procBox.Size = new System.Drawing.Size(118, 20);
             this.procBox.TabIndex = 2;
@@ -421,13 +436,12 @@
             // virtualAllocEx_Option
             // 
             this.virtualAllocEx_Option.AutoSize = true;
-            this.virtualAllocEx_Option.Location = new System.Drawing.Point(13, 54);
+            this.virtualAllocEx_Option.Location = new System.Drawing.Point(13, 66);
             this.virtualAllocEx_Option.Name = "virtualAllocEx_Option";
-            this.virtualAllocEx_Option.Size = new System.Drawing.Size(786, 17);
+            this.virtualAllocEx_Option.Size = new System.Drawing.Size(786, 30);
             this.virtualAllocEx_Option.TabIndex = 1;
             this.virtualAllocEx_Option.TabStop = true;
-            this.virtualAllocEx_Option.Text = "Spawns notepad (32) as a background process and injects the  given shellcode usin" +
-    "g the CreateRemoteThread API function (Shellcode Arch: x86, OS Arch: x86)";
+            this.virtualAllocEx_Option.Text = resources.GetString("virtualAllocEx_Option.Text");
             this.virtualAllocEx_Option.UseVisualStyleBackColor = true;
             this.virtualAllocEx_Option.CheckedChanged += new System.EventHandler(this.virtualAllocEx_Option_CheckedChanged);
             // 
@@ -437,11 +451,12 @@
             this.virtualAlloc_Option.Checked = true;
             this.virtualAlloc_Option.Location = new System.Drawing.Point(13, 19);
             this.virtualAlloc_Option.Name = "virtualAlloc_Option";
-            this.virtualAlloc_Option.Size = new System.Drawing.Size(559, 17);
+            this.virtualAlloc_Option.Size = new System.Drawing.Size(573, 30);
             this.virtualAlloc_Option.TabIndex = 0;
             this.virtualAlloc_Option.TabStop = true;
-            this.virtualAlloc_Option.Text = "Create new thread in memory using the CreateThread API Function (Shellcode Arch: " +
-    "x86, x64, OS Arch: x86, x64)\r\n";
+            this.virtualAlloc_Option.Text = "Creates a new thread in memory using the CreateThread API Function (Shellcode Arc" +
+    "h: x86, x64, OS Arch: x86, x64)\r\n+ Stable execution but can be traced by most AV" +
+    "s :((((\r\n";
             this.virtualAlloc_Option.UseVisualStyleBackColor = true;
             // 
             // groupBox4
@@ -464,7 +479,7 @@
             this.groupBox4.Controls.Add(this.ivBox);
             this.groupBox4.Location = new System.Drawing.Point(301, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1040, 694);
+            this.groupBox4.Size = new System.Drawing.Size(1040, 726);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "PREFERENCES";
@@ -506,7 +521,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1253, 716);
+            this.tabControl1.Size = new System.Drawing.Size(1253, 748);
             this.tabControl1.TabIndex = 19;
             // 
             // tabPage1
@@ -516,7 +531,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1245, 690);
+            this.tabPage1.Size = new System.Drawing.Size(1245, 722);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Shellcode Injection";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -526,7 +541,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1245, 690);
+            this.tabPage2.Size = new System.Drawing.Size(1245, 722);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Advanced (TODO)";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -546,7 +561,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "AV/\\tor";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -609,6 +623,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton APCInjectionCheckBox;
     }
 }
 

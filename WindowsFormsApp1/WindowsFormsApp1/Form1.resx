@@ -1496,8 +1496,20 @@
         APgwiwAAAHyYRQAAgMvjNv0Pj4CYSfd9MMUAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="injectExistingApp.Text" xml:space="preserve">
+    <value>Injects the  given shellcode to an existing application which is given by the user in the text box bellow (Shellcode Architecture should be the same 
+  with the selected OS Architecture)
+++ Stable execution, since a valid target procedure is given, bypasses a large number of AVs</value>
+  </data>
+  <data name="virtualAllocEx_Option.Text" xml:space="preserve">
+    <value>Spawns notepad (32) as a background process and injects the  given shellcode using the CreateRemoteThread API function (Shellcode Arch: x86, OS Arch: x86)
+++ Stable execution might bypass a large number of AVs :(</value>
+  </data>
   <metadata name="RTLOtip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>37</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
