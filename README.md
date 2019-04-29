@@ -28,6 +28,16 @@ The default values contain shellcode that executes notepad.exe (32bit). This dem
 
 After filling the provided inputs and selecting the output path an executable is generated according to the chosen options. 
 
+### RTLO option
+
+In simple words, spoof an executable file to look like having an "innocent" extention like 'pdf', 'txt' etc. 
+E.g. the file "testcod.exe" will be interpreted as "tesexe.doc" 
+
+Beware of the fact that some AVs alert the spoof by its own as a malware. 
+
+### Set custom icon
+
+I guess you all know what it is :)
 
 ### Bypassing Kaspersky AV on a Win 10 x64 host (TEST CASE) 
 
