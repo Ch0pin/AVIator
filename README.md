@@ -1,3 +1,11 @@
+### DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL ...as I did it for you 
+*Current Detection Rate*: 3/71
+SHA-256	e6a5299d4c081140a563ff5a64a94f1543480efeb78d5036f703004d64b4bed2
+File name	t9jkoek.exe
+File size	15.5 KB
+Last analysis	2019-04-29 08:26:13 UTC
+https://www.virustotal.com/#/file/e6a5299d4c081140a563ff5a64a94f1543480efeb78d5036f703004d64b4bed2/detection
+
 
 # AV|ator
 
@@ -90,7 +98,4 @@ To Damon Mohammadbagher for the encryption procedure
 I developed this app in order to overcome the demanding challenges of the pentest procedure and this is the only way that the app should be used. Make sure that you have the required permission to use it against a system and never use it for illegal purposes. 
 I would suggest to avoid testing the executables on solutions like virus total e.t.c. If you want to use the application for pentesting purposes I am sure you have already identified the AV used by your target, so go download a demo and make your testing offline. 
 
-And please remember:
-
-### DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL 
 
