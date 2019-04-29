@@ -1,4 +1,4 @@
-### DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL ...as I did it for you
+### DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL ...as I did it one time for you
 
 *Current Detection Rate*: 3/71
 
