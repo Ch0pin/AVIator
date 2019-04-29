@@ -31,7 +31,8 @@ AV|ator is a backdoor generator utility, which uses cryptographic and injection 
 
 The application has a form which consists of three main inputs (See screenshot bellow):
 
-https://ibb.co/X24mnzW
+![Screenshot 2019-04-29 at 11 41 21](https://user-images.githubusercontent.com/4659186/56884876-bca19480-6a73-11e9-8bbf-d249c4813e4e.png)
+
 
 1.	A text containing the encryption key used to encrypt the shellcode 
 2.	A text containing the IV used for AES encryption 
