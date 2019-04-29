@@ -12,6 +12,7 @@ Last analysis	2019-04-29 08:26:13 UTC
 
 https://www.virustotal.com/#/file/e6a5299d4c081140a563ff5a64a94f1543480efeb78d5036f703004d64b4bed2/detection
 
+![Screenshot 2019-04-29 at 11 33 11](https://user-images.githubusercontent.com/4659186/56884557-d9899800-6a72-11e9-8bb5-95872da1407d.png)
 
 # AV|ator
 
