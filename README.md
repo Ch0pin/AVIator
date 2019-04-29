@@ -1,9 +1,15 @@
-### DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL ...as I did it for you 
+### DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL ...as I did it for you
+
 *Current Detection Rate*: 3/71
+
 SHA-256	e6a5299d4c081140a563ff5a64a94f1543480efeb78d5036f703004d64b4bed2
+
 File name	t9jkoek.exe
+
 File size	15.5 KB
+
 Last analysis	2019-04-29 08:26:13 UTC
+
 https://www.virustotal.com/#/file/e6a5299d4c081140a563ff5a64a94f1543480efeb78d5036f703004d64b4bed2/detection
 
 
