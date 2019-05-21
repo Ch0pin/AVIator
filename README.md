@@ -15,9 +15,11 @@ Last analysis	2019-04-29 08:26:13 UTC
 
 # AV|Ator 
 
-*AV aka Antivirus"
+*AV aka Antivirus*
 
-*Ator is a swordsman, alchemist, scientist, magician, scholar, and engineer, with the ability to sometimes produce objects out of thin air* (https://en.wikipedia.org/wiki/Ator "Ator")
+*Ator is a swordsman, alchemist, scientist, magician, scholar, and engineer, with the ability to sometimes produce objects out of thin air* (https://en.wikipedia.org/wiki/Ator)
+
+--
 
 **AV|Ator** is a backdoor generator utility, which uses cryptographic and injection techniques in order to bypass AV detection. More specifically:
 - It uses AES encryption in order to encrypt a given shellcode 
