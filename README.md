@@ -15,7 +15,7 @@ Last analysis	2019-04-29 08:26:13 UTC
 
 # AV|Ator 
 
-*[Ator is a swordsman, alchemist, scientist, magician, scholar, and engineer, with the ability to sometimes produce objects out of thin air]* (https://en.wikipedia.org/wiki/Ator)
+*[Ator is a swordsman, alchemist, scientist, magician, scholar, and engineer, with the ability to sometimes produce objects out of thin air* (https://en.wikipedia.org/wiki/Ator)]
 
 **AV|Ator** is a backdoor generator utility, which uses cryptographic and injection techniques in order to bypass AV detection. More specifically:
 - It uses AES encryption in order to encrypt a given shellcode 
@@ -94,9 +94,9 @@ Install Mono according to your linux distribution, download and run the binaries
 
 e.g. in kali:
 
-```root@kali# apt install mono-devel 
-
-root@kali# mono aviator.exe
+```
+   root@kali# apt install mono-devel 
+   root@kali# mono aviator.exe
 ```
 
 ### Credits
