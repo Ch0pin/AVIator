@@ -12,9 +12,11 @@ Last analysis	2019-04-29 08:26:13 UTC
 
 ![Screenshot 2019-04-29 at 11 33 11](https://user-images.githubusercontent.com/4659186/56884557-d9899800-6a72-11e9-8bb5-95872da1407d.png)
 
-# AV|ator
+# AV|Ator 
 
-AV|ator is a backdoor generator utility, which uses cryptographic and injection techniques in order to bypass AV detection. More specifically:
+*Ator is a swordsman, alchemist, scientist, magician, scholar, and engineer, with the ability to sometimes produce objects out of thin air*
+
+AV|Ator is a backdoor generator utility, which uses cryptographic and injection techniques in order to bypass AV detection. More specifically:
 - It uses AES encryption in order to encrypt a given shellcode 
 - Generates an executable file which contains the encrypted payload
 - The shellcode is decrypted and injected to the target system using various injection techniques 
