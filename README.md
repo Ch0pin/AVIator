@@ -17,9 +17,9 @@ Last analysis	2019-04-29 08:26:13 UTC
 
 **about**://name
 
-*AV aka Antivirus*
+***AV**: Antivirus*
 
-*Ator is a swordsman, alchemist, scientist, magician, scholar, and engineer, with the ability to sometimes produce objects out of thin air* (https://en.wikipedia.org/wiki/Ator)
+***Ator**: is a swordsman, alchemist, scientist, magician, scholar, and engineer, with the ability to sometimes produce objects out of thin air* (https://en.wikipedia.org/wiki/Ator)
 
 #
 
