@@ -1,22 +1,12 @@
 
+### Update 09/12/2021
+AV/Ator is discontinued and currently maintained for the sake posterity and research. 
+
 ### Update 17/10/2019
 It has been reported that the produced backdoor is no more undetectable from the majority of the AV solutions, which is indeed true and which is something I expected by the time that the software is getting more and more 'popular'. As a temporary solution I advise you to use a C# obfuscator on the produced executable. In my case, I used babel for net (http://www.babelfor.net/) with a great success for the majority of AV’s (including Kaspersky, Avast etc.). 
 
 
 ### DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL ...as I did it one time for you
-
-*Current Detection Rate*: 3/71
-
-```SHA-256	e6a5299d4c081140a563ff5a64a94f1543480efeb78d5036f703004d64b4bed2
-
-File name	t9jkoek.exe .
-
-File size	15.5 KB
-
-Last analysis	2019-04-29 08:26:13 UTC
-```
-
-![Screenshot 2019-04-29 at 11 33 11](https://user-images.githubusercontent.com/4659186/56884557-d9899800-6a72-11e9-8bb5-95872da1407d.png)
 
 # AV|Ator 
 
