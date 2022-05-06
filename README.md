@@ -1,12 +1,6 @@
 
 ### Update 09/12/2021
-AV/Ator is discontinued and currently maintained for the sake posterity and research. 
-
-### Update 17/10/2019
-It has been reported that the produced backdoor is no more undetectable from the majority of the AV solutions, which is indeed true and which is something I expected by the time that the software is getting more and more 'popular'. As a temporary solution I advise you to use a C# obfuscator on the produced executable. In my case, I used babel for net (http://www.babelfor.net/) with a great success for the majority of AV’s (including Kaspersky, Avast etc.). 
-
-
-### DO NOT UPLOAD ANY SAMPLES TO VIRUS TOTAL ...as I did it one time for you
+AV/Ator is discontinued and currently maintained for the sake of posterity and research. 
 
 # AV|Ator 
 
@@ -108,7 +102,5 @@ To Damon Mohammadbagher for the encryption procedure
 
 ### Disclaimer 
 
-I developed this app in order to overcome the demanding challenges of the pentest procedure and this is the only way that the app should be used. Make sure that you have the required permission to use it against a system and never use it for illegal purposes. 
-I would suggest to avoid testing the executables on solutions like virus total e.t.c. If you want to use the application for pentesting purposes I am sure you have already identified the AV used by your target, so go download a demo and make your testing offline. 
-
+I developed this app in order to overcome the demanding challenges of the pentest process and this is the **ONLY WAY** that this app should be used. Make sure that you have the required permission to use it against a system and never use it for illegal purposes. 
 
