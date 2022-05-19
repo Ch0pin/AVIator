@@ -1,0 +1,63 @@
+==========
+References
+==========
+AvIator
+<global namespace>
+AvIator.Properties
+System
+System.Collections.Generic
+System.Linq
+System.Text
+System.Threading.Tasks
+Microsoft.CSharp
+System.CodeDom.Compiler
+System.IO
+System.Security.Cryptography
+System.Windows.Forms
+System.Diagnostics
+System.Runtime.InteropServices
+System.Reflection
+project.all
+
+===============
+DownloadedFiles
+===============
+project.all.json
+
+==============
+ProjectResults
+==============
+----------------------
+Showing results for: E:\AVAtor.NetCore\WindowsFormsApp1\AVator.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net5.0
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: E:\AVAtor.NetCore\WindowsFormsApp1\AVator.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net5.0
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+
+===========
+BuildErrors
+===========
+
+

