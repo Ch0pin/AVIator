@@ -1,0 +1,10 @@
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Release\AVator.csproj.GenerateResource.cache
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Release\AVator.csproj.CoreCompileInputs.cache
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Release\AVator.csprojAssemblyReference.cache
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Release\AvIator.Properties.Resources.resources
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\bin\x64\Release\AvIator.exe.config
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\bin\x64\Release\AvIator.exe
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\bin\x64\Release\AvIator.pdb
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Release\AvIator.exe
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Release\AvIator.pdb
+C:\Users\IK\Desktop\AVIator\WindowsFormsApp1\WindowsFormsApp1\obj\x64\Release\AvIator.Form1.resources
