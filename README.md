@@ -1,6 +1,7 @@
 
-### Update 09/12/2021
-AV/Ator is discontinued and currently maintained for the sake of posterity and research. 
+AviAtor Ported to NETCore 5 with an updated UI
+
+<img src="screenshot.png" />
 
 # AV|Ator 
 
