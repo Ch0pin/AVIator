@@ -82,7 +82,7 @@ Getting a shell in a windows 10 machine running fully updated kaspersky AV
 
 **Windows:**
 
-Either compile the project or download the allready compiled executable from the following folder:
+Either compile the project or download the already compiled executable from the following folder:
 
 https://github.com/Ch0pin/AVIator/tree/master/Compiled%20Binaries
 
